@@ -1,0 +1,32 @@
+
+// --- these are notes for deployment --- //
+
+run: heroku login > ensure you are logged in before proceeding;
+
+run: heroku create > you'll get a unique url key and app name; 
+
+run: git push heroku main > push to that newly created heroku app; 
+
+run: heroku open > launch the app;
+
+-- run: git remote rm heroku > to remove where your code is pointing at in heroku; 
+
+
+// --- to get our database onto heroku --- //
+
+run: heroku addons:create heroku-postgresql:hobby-dev
+
+run: heroku pg:push **your_database_goes_here** DATABASE_URL
+
+go: Datastores > Settings > Connect your postico using the DB Credentials so it's not pointing at it locally;
+
+-- run: git push heroku main
+
+
+
+-- heroku runs the scripts "build" to compiles your code;
+    runs build, runs start, then deploys;
+
+can npm run build to troubleshoot; will compile like it's on heroku;
+
+
