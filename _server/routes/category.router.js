@@ -5,15 +5,15 @@ const router = express.Router();
 
 // ----- GET ----- //
 router.get('/', (req, res) => {
-
   let queryText = `
     SELECT DISTINCT "category"
-    FROM 	        "Keywords"
+    FROM 	          "keywords"
     ORDER BY        "category"; `;
 
   pool.query(queryText)
     .then(result => {
-    //   console.log('--- router.GET /api/category result.rows', result.rows);
+      console.log('in get category.router');
+      // console.log('--- router.GET /api/category result.rows', result.rows);
       res.send(result.rows);
 
     }).catch(error => {

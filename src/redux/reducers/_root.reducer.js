@@ -1,5 +1,3 @@
-
-// import { combineReducers } from 'react-redux';
 import { combineReducers } from 'redux'
 import errorsReducer from './errors.reducer';
 import currentDateReducer from './currentDate.Reducer';

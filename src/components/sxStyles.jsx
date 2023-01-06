@@ -33,6 +33,7 @@ export const theme = createTheme({
       md: 960,
       lg: 1280,
       xl: 1920,
+      xxl: 2420,
     },
   },
 });
@@ -135,7 +136,6 @@ export const sxNavH6 = {
 // ----- BreakPoints ----- //
 // ----- BreakPoints ----- //
 
-
 // ----- App ----- //
 // ----- App ----- //
 // ----- App ----- //
@@ -158,8 +158,6 @@ export const sxAppContainer = {
   alignItems: "end",
   backgroundColor: "secondary",
   // minHeight: "100vh",
-
-
 };
 
 // ----- App ----- //
@@ -181,7 +179,6 @@ export const sxCategoryList = {
   px: 5,
   gap: 4,
   textAlign: "center",
-
 };
 
 export const sxCategoryChipContent = {
@@ -286,6 +283,7 @@ export const sxGenerateButtonContainer = {
   // border: "1px solid red",
   display: "flex",
   justifyContent: "center",
+  alignItems: "center",
 };
 
 export const sxGenerateButton = {
@@ -306,10 +304,15 @@ export const sxGenerateButton = {
     boxShadow: 2,
   },
 
+  [theme.breakpoints.down("xxl")]: {
+    fontSize: "2.1rem",
+    width: "240px",
+    height: "240px",
+  },
   [theme.breakpoints.down("xl")]: {
     fontSize: "1.618rem",
-    width: "188px",
-    height: "188px",
+    width: "200px",
+    height: "200px",
   },
   [theme.breakpoints.down("lg")]: {
     fontSize: "1.25rem",
@@ -337,7 +340,6 @@ export const sxGenerateButton = {
 
 export const sxHomeContainer = {
   height: "100%",
-
 };
 
 export const sxHomeSectionOne = {
@@ -350,14 +352,12 @@ export const sxHomeSectionOne = {
   mt: 8,
   px: 4,
   height: "100%",
-
 };
 
 export const sxHomeContent = {
   // border: "1px solid blue",
   minHeight: "96vh",
-
-}
+};
 
 export const sxButtonContainer = {
   // border: "1px solid blue",
@@ -368,7 +368,6 @@ export const sxButtonContainer = {
   gap: 6,
   width: "1fr",
   height: "100%",
-
 };
 
 // ----- Home ----- //
@@ -395,7 +394,6 @@ export const sxNavContainer = {
 // ----- Nav ----- //
 // ----- Nav ----- //
 // ----- Nav ----- //
-
 
 // ----- PromptOutput ----- //
 // ----- PromptOutput ----- //
@@ -440,20 +438,26 @@ export const sxClearButton = {
   "&:hover": {
     color: "info.light",
   },
-}
+};
 
 export const sxPromptOutput = {
-  //  border: "1px solid blue",
+  // border: "2px solid blue",
   display: "flex",
-  flexDirection: "row",
+  flexDirection: "column",
   flexWrap: "wrap",
-  border: 1,
-  borderColor: "info.light",
-  minWidth: "85%",
-  minHeight: "5rem",
+  // alignItems: "center",
+  // justifyContent: "center",
+  // border: 1,
+  // borderColor: "info.light",
+  // minWidth: "85%",
+  height: "10rem",
   mx: 4,
-  p: 2,
-  borderRadius: 4,
+  // borderRadius: 4,
+  gap: .5,
+};
+
+export const sxOutputText = {
+  fontWeight: "bold",
 };
 
 // ----- PromptOutput ----- //
@@ -500,7 +504,6 @@ export const sxTextInput = {
   color: "info.light !important",
   backgroundColor: "secondary",
   width: "18rem",
-
 };
 
 // ----- UserInputs ----- //

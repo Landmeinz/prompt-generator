@@ -13,6 +13,7 @@ import {
   sxPromptOutput,
   sxCopyButton,
   sxClearButton,
+  sxOutputText,
 } from "../sxStyles";
 
 function PromptOutput() {
@@ -32,7 +33,6 @@ function PromptOutput() {
     // } catch (err) {
     //   console.error("Failed to copy: ", err);
     // }
-
   } // PromptOutput;
 
   function handleClear() {
@@ -62,17 +62,17 @@ function PromptOutput() {
       </Box>
 
       <Box id="promptOutput" sx={sxPromptOutput}>
-        {userInputs?.map((input, i) => (
-          <Typography id="promptText" key={i} variant="body1" value={input}>
-            {input ? `${input}, ` : ""}
-          </Typography>
-        ))}
+          {userInputs?.map((input, i) => (
+            <Typography id="promptText" sx={sxOutputText} key={i} variant="body1" value={input}>
+              {input != null ? `${input},` : ""}
+            </Typography>
+          ))}
 
-        {randomKeywords?.map((kw, k) => (
-          <Typography id="promptText" key={k} variant="body1" value={kw}>
-            {kw.keyword ? `${kw.keyword}, ` : ""}
-          </Typography>
-        ))}
+          {randomKeywords?.map((kw, k) => (
+            <Typography id="promptText" sx={sxOutputText} key={k} variant="body1" value={kw}>
+              {kw.keyword != null ? `${kw.keyword},` : ""}
+            </Typography>
+          ))}
       </Box>
     </Box>
   );

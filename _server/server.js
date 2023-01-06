@@ -5,7 +5,7 @@ const cors = require('cors');
 require('dotenv').config();
 
 // Body parser middleware //
-app.use(bodyParser.json());
+app.use(bodyParser.json({limit: '50mb'}));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // fucking cors //
@@ -29,6 +29,7 @@ const categoryRouter = require('../_server/routes/category.router');
 const keywordRouter = require('../_server/routes/keyword.router');
 app.use('/api/date', currentDateRouter);
 app.use('/api/category', categoryRouter);
+app.use('/api/keyword', keywordRouter)
 
 // App Set //
 app.set("port", process.env.PORT || 5050);

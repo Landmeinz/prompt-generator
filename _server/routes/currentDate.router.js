@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
 
     pool.query(queryText)
         .then(result => {
-            console.log('--- router.GET /api/date result.rows', result.rows);
+            // console.log('--- router.GET /api/date result.rows', result.rows);
             res.send(result.rows);
         }).catch(error => {
             console.log('ERROR router.GET /api/date', error);

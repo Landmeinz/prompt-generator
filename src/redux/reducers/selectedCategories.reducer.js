@@ -6,7 +6,7 @@ const selectedCategories = (state = [], action) => {
 
         case 'SET_SELECTED_CATEGORIES_ALL':
             console.log('payload', action.payload);
-            return [...action.payload];
+            return action.payload;
 
         case 'SET_SELECTED_CATEGORIES_NONE':
             return [];

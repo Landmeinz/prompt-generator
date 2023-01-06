@@ -20,11 +20,12 @@ function CategoryPill({ category }) {
 
   function handleClick(category) {
     console.log("--- clicked on", category, "---");
+    console.log("--- categories", categories, "---");
 
     if (category === "All") {
       return dispatch({
         type: "SET_SELECTED_CATEGORIES_ALL",
-        payload: categories,
+        payload: categories.category,
       });
     }
     if (category === "None") {
