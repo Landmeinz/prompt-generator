@@ -30,3 +30,6 @@ go: Datastores > Settings > Connect your postico using the DB Credentials so it'
 can npm run build to troubleshoot; will compile like it's on heroku;
 
 
+ACCIDENTALLY PUSHED UP NODE MODULES RUN THIS:
+
+git filter-branch --index-filter 'git rm -r --cached --ignore-unmatch <file/dir>' HEAD
