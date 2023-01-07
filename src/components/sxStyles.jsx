@@ -362,8 +362,8 @@ export const sxHomeSectionOne = {
   // px: 6,
   // height: "100vh",
   // width: "100vw",
-  gap: 6,
-  pt: "5rem",
+  gap: 10,
+  pt: "4rem",
 };
 
 export const sxButtonContainer = {
@@ -466,7 +466,7 @@ export const sxPromptOutput = {
   flexWrap: "wrap",
   // alignItems: "center",
   // justifyContent: "space-around",
-  border: 1,
+  border: 2,
   borderColor: "primary.main",
   width: "85%",
   height: "7em",
