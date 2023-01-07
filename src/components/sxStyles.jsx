@@ -8,14 +8,14 @@ import { createTheme } from "@mui/material/styles";
 export const theme = createTheme({
   palette: {
     primary: {
-      main: "hsla(250, 60%, 50%, 1)",
-      dark: "hsla(250, 40%, 10%, 1)",
-      light: "hsla(230, 80%, 10%, 1)",
+      main: "hsla(355, 100%, 30%, 1)",
+      dark: "hsla(355, 100%, 10%, 1)",
+      light: "hsla(355, 100%, 50%, 1)",
     },
     secondary: {
-      main: "hsla(220, 20%, 20%, 1)",
+      main: "hsla(220, 15%, 15%, 1)",
       dark: "hsla(312, 14%, 36%, 1)",
-      light: "hsla(180, 78%, 48%, 1)",
+      light: "hsla(220, 0%, 50%, 1)",
     },
     error: {
       main: "hsla(350, 90%, 40%, 1)",
@@ -143,7 +143,7 @@ export const sxNavH6 = {
 export const sxApp = {
   // border: '2px solid pink',
   position: "absolute",
-  bgcolor: "hsla(220, 20%, 20%, 1)",
+  bgcolor: "secondary.main",
   minHeight: "100vh",
   minWidth: "100vw",
   overflow: "hidden",
@@ -206,9 +206,11 @@ export const sxCategoryPillContainer = {
   py: ".4rem",
   borderRadius: 5,
   color: "info.light",
-  backgroundColor: "hsla(250, 60%, 50%, 1)",
+  backgroundColor: "hsla(355, 100%, 30%, 1)",
   boxShadow: 2,
   userSelect: "none",
+  border: 1,
+  borderColor: "primary.main",
 
   "&:hover": {
     cursor: "pointer",
@@ -231,9 +233,11 @@ export const sxCategoryPillContainerSelected = {
   py: ".4rem",
   borderRadius: 5,
   color: "info.light",
-  backgroundColor: "hsla(250, 40%, 20%, 1)",
+  backgroundColor: "hsla(355, 35%, 35%, 1)",
   boxShadow: 4,
   userSelect: "none",
+  border: 1,
+  borderColor: "primary.main",
 
   "&:hover": {
     cursor: "pointer",
@@ -286,23 +290,23 @@ export const sxGenerateButtonContainer = {
 };
 
 export const sxGenerateButton = {
-  bgcolor: "secondary.main",
-  color: "info.light",
+  bgcolor: "primary.main",
+  color: "secondary.light",
   border: 3,
   borderRadius: "50%",
-  borderColor: "primary.main",
+  borderColor: "info.main",
   fontWeight: "bold",
   transition: ".25s",
-  boxShadow: 5,
+  boxShadow: 4,
 
   "&:hover": {
     border: 1,
     bgcolor: "primary.dark",
-    color: "primary.main",
-    transform: "scale(1.05)",
+    color: "info.light",
+    transform: "scale(1.02)",
     transition: ".25s",
-    boxShadow: 2,
-    // borderColor: "info.light",
+    boxShadow: 6,
+    borderColor: "primary.light",
   },
 
   [theme.breakpoints.down("xxl")]: {
@@ -360,7 +364,6 @@ export const sxHomeSectionOne = {
   // width: "100vw",
   gap: 6,
   pt: "5rem",
-
 };
 
 export const sxButtonContainer = {
@@ -372,7 +375,6 @@ export const sxButtonContainer = {
   gap: 6,
   // height: "100%",
   width: "85vw",
-
 };
 
 export const sxInputPromptContainer = {
@@ -384,7 +386,7 @@ export const sxInputPromptContainer = {
   gap: 6,
   height: "100%",
   width: "90vw",
-}
+};
 
 // ----- Home ----- //
 // ----- Home ----- //
@@ -424,8 +426,7 @@ export const sxPromptContainer = {
   color: "info.light",
   width: "100%",
   height: "100%",
-  gap: 3
-
+  gap: 3,
 };
 
 export const sxPromptCopy = {
@@ -465,13 +466,14 @@ export const sxPromptOutput = {
   flexWrap: "wrap",
   // alignItems: "center",
   // justifyContent: "space-around",
-  // border: 1,
-  // borderColor: "info.light",
-  minWidth: "85%",
+  border: 1,
+  borderColor: "primary.main",
+  width: "85%",
   height: "7em",
   // mx: 4,
-  // borderRadius: 4,
-  gap: .5,
+  p: 1,
+  borderRadius: 4,
+  gap: 0.5,
 };
 
 export const sxOutputText = {
@@ -516,8 +518,7 @@ export const sxAddTextButton = {
 
 export const sxAddCircleIcon = {
   color: "info.light",
-
-}
+};
 
 export const sxTextInput = {
   // border: "1px solid purple",
@@ -532,7 +533,6 @@ export const sxTextInput = {
   "&:input ": {
     color: "red",
   },
-
 };
 
 // ----- UserInputs ----- //
