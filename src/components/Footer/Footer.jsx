@@ -16,7 +16,7 @@ function Footer() {
           content="Prompt Generator designed and created by Eric Meinzer from Minneapolis, Minnesota. MPLS, MN"
         />
       </Helmet>
-      <Typography color="secondary" variant="body2">Generate Often 2023</Typography>
+      <Typography color="info.light" variant="body2">Generate Often 2023</Typography>
     </Box>
   );
 }

@@ -141,23 +141,24 @@ export const sxNavH6 = {
 // ----- App ----- //
 
 export const sxApp = {
-  // border: '1px solid red',
+  // border: '2px solid pink',
   position: "absolute",
   bgcolor: "hsla(220, 20%, 20%, 1)",
   minHeight: "100vh",
   minWidth: "100vw",
+  overflow: "hidden",
   m: 0,
   p: 0,
 };
 
 export const sxAppContainer = {
-  // border: '1px solid yellow',
+  // border: '1px solid purple',
   display: "flex",
   flexDirection: "column",
-  justifyContent: "end",
-  alignItems: "end",
+  justifyContent: "center",
+  alignItems: "center",
   backgroundColor: "secondary",
-  // minHeight: "100vh",
+  height: "100%",
 };
 
 // ----- App ----- //
@@ -258,17 +259,15 @@ export const sxCategoryPillContainerSelected = {
 // ----- Footer ----- //
 
 export const sxFooterContainer = {
-  border: "1px solid green",
+  // border: "1px solid green",
   height: "1.5rem",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
   width: "100%",
-  bgcolor: "info.light",
-  color: "secondary.main",
 
-  position: "sticky",
-  // bottom: 0,
+  position: "fixed",
+  bottom: 0,
 };
 
 // ----- Footer ----- //
@@ -289,7 +288,7 @@ export const sxGenerateButtonContainer = {
 export const sxGenerateButton = {
   bgcolor: "secondary.main",
   color: "primary",
-  border: 1,
+  border: 2,
   borderRadius: "50%",
   borderColor: "info.light",
   fontWeight: "bold",
@@ -302,6 +301,7 @@ export const sxGenerateButton = {
     transform: "scale(1.05)",
     transition: ".25s",
     boxShadow: 2,
+    borderColor: "info.dark",
   },
 
   [theme.breakpoints.down("xxl")]: {
@@ -342,33 +342,48 @@ export const sxHomeContainer = {
   height: "100%",
 };
 
+export const sxHomeContent = {
+  // border: "1px solid blue",
+  // minHeight: "96vh",
+};
+
 export const sxHomeSectionOne = {
   // border: "1px solid red",
   display: "flex",
-  flexDirection: "row",
-  justifyContent: "center",
+  flexDirection: "column",
+  // justifyContent: "center",
   alignItems: "center",
-  gap: 8,
-  mt: 8,
-  px: 4,
-  height: "100%",
-};
+  // gap: 8,
+  // px: 6,
+  // height: "100vh",
+  // width: "100vw",
+  gap: 6,
+  pt: "5rem",
 
-export const sxHomeContent = {
-  // border: "1px solid blue",
-  minHeight: "96vh",
 };
 
 export const sxButtonContainer = {
   // border: "1px solid blue",
   display: "flex",
-  flexDirection: "column",
+  flexDirection: "row",
   alignItems: "center",
   justifyContent: "center",
   gap: 6,
-  width: "1fr",
-  height: "100%",
+  // height: "100%",
+  width: "85vw",
+
 };
+
+export const sxInputPromptContainer = {
+  // border: "1px solid blue",
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "center",
+  gap: 6,
+  height: "100%",
+  width: "90vw",
+}
 
 // ----- Home ----- //
 // ----- Home ----- //
@@ -400,14 +415,16 @@ export const sxNavContainer = {
 // ----- PromptOutput ----- //
 
 export const sxPromptContainer = {
-  // border: "1px solid blue",
+  // border: "1px solid yellow",
   display: "flex",
   flexDirection: "row",
   alignItems: "center",
-  mx: 10,
-  my: 8,
-  gap: 3,
+  justifyContent: "space-between",
   color: "info.light",
+  width: "100%",
+  height: "100%",
+  gap: 3
+
 };
 
 export const sxPromptCopy = {
@@ -441,17 +458,17 @@ export const sxClearButton = {
 };
 
 export const sxPromptOutput = {
-  // border: "2px solid blue",
+  // border: "2px solid green",
   display: "flex",
-  flexDirection: "column",
+  flexDirection: "row",
   flexWrap: "wrap",
   // alignItems: "center",
-  // justifyContent: "center",
+  // justifyContent: "space-around",
   // border: 1,
   // borderColor: "info.light",
-  // minWidth: "85%",
-  height: "10rem",
-  mx: 4,
+  minWidth: "85%",
+  height: "7em",
+  // mx: 4,
   // borderRadius: 4,
   gap: .5,
 };
@@ -501,9 +518,15 @@ export const sxTextInput = {
   border: 1,
   borderColor: "info.light",
   borderRadius: 1,
-  color: "info.light !important",
-  backgroundColor: "secondary",
+  // color: "info.light !important",
+  color: "blue",
+  backgroundColor: "info.light",
   width: "18rem",
+
+  "&:input ": {
+    color: "red",
+  },
+
 };
 
 // ----- UserInputs ----- //

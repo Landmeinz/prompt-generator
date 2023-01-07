@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 // --- COMPONENTS --- //
@@ -21,36 +21,41 @@ function PromptOutput() {
   const randomKeywords = useSelector((store) => store.randomKeywords);
   const userInputs = useSelector((store) => store.userInputs);
 
-  function handleCopy() {
+  let [text, setText] = useState("");
+
+  function handleCopy(text) {
     console.log("handleCopy");
-    let text = randomKeywords + userInputs;
+    setText(randomKeywords.id + userInputs.input);
     navigator.clipboard.writeText(text);
     console.log("Content copied to clipboard:", text);
-
-    // try {
-    //   navigator.clipboard.writeText(text);
-    //   console.log("Content copied to clipboard");
-    // } catch (err) {
-    //   console.error("Failed to copy: ", err);
-    // }
   } // PromptOutput;
+
+  // function copyToClipboard(value) {
+  //   const tempInput = document.createElement("input");
+  //   tempInput.value = value;
+  //   document.body.appendChild(tempInput);
+  //   tempInput.select();
+  //   document.execCommand("copy");
+  //   document.body.removeChild(tempInput);
+  // }
 
   function handleClear() {
     dispatch({ type: "CLEAR_RANDOM_KEYWORDS" });
     dispatch({ type: "CLEAR_USER_INPUTS" });
+    dispatch({ type: "SET_SELECTED_CATEGORIES_NONE" });
   } // handleClear;
 
   return (
     <Box id="promptContainer" sx={sxPromptContainer}>
       <Box id="promptCopy" sx={sxPromptCopy}>
-        <Button
+        {/* <Button
           id="copyButton"
           sx={sxCopyButton}
           onClick={() => handleCopy()}
           variant="contained"
         >
           Copy
-        </Button>
+        </Button> */}
         <Button
           id="clearButton"
           sx={sxClearButton}
@@ -62,17 +67,29 @@ function PromptOutput() {
       </Box>
 
       <Box id="promptOutput" sx={sxPromptOutput}>
-          {userInputs?.map((input, i) => (
-            <Typography id="promptText" sx={sxOutputText} key={i} variant="body1" value={input}>
-              {input != null ? `${input},` : ""}
-            </Typography>
-          ))}
+        {userInputs?.map((input, i) => (
+          <Typography
+            id="promptText"
+            sx={sxOutputText}
+            key={i}
+            variant="body1"
+            value={input}
+          >
+            {input != null ? `${input},` : ""}
+          </Typography>
+        ))}
 
-          {randomKeywords?.map((kw, k) => (
-            <Typography id="promptText" sx={sxOutputText} key={k} variant="body1" value={kw}>
-              {kw.keyword != null ? `${kw.keyword},` : ""}
-            </Typography>
-          ))}
+        {randomKeywords?.map((kw, k) => (
+          <Typography
+            id="promptText"
+            sx={sxOutputText}
+            key={k}
+            variant="body1"
+            value={kw}
+          >
+            {kw.keyword != null ? `${kw.keyword},` : ""}
+          </Typography>
+        ))}
       </Box>
     </Box>
   );

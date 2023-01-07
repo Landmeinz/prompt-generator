@@ -18,14 +18,18 @@ function CategoryPill({ category }) {
   const categories = useSelector((store) => store.categories);
   const selectedCategories = useSelector((store) => store.selectedCategories);
 
+  // console.log('--- start caategories:', categories);
+
+  let testCategories = categories.map(x => x.category);
+
   function handleClick(category) {
     console.log("--- clicked on", category, "---");
-    console.log("--- categories", categories, "---");
+    // console.log("--- categories", categories, "---");
 
     if (category === "All") {
       return dispatch({
         type: "SET_SELECTED_CATEGORIES_ALL",
-        payload: categories.category,
+        payload: testCategories,
       });
     }
     if (category === "None") {

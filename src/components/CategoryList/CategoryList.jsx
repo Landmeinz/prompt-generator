@@ -16,7 +16,7 @@ function CategoryList() {
 
   return (
     <Box id="categoryList" sx={sxCategoryList}>
-      <Typography color="primary" variant="h4">
+      <Typography color="info.light" variant="h4">
         Select Some Categories
       </Typography>
 

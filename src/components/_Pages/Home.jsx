@@ -9,7 +9,7 @@ import PromptOutput from "../PromptOutput/PromptOutput";
 import UserInputs from "../UserInputs/UserInputs";
 
 // --- MUI --- //
-import { Box} from "@mui/material";
+import { Box } from "@mui/material";
 
 // --- SX STYLES --- //
 import {
@@ -18,11 +18,11 @@ import {
   sxHomeSectionOne,
   sxButtonContainer,
   sxHomeContent,
-
+  sxInputPromptContainer,
+  
 } from "../sxStyles";
 
 function Home() {
-
   return (
     <Box id="homeContainer" sx={sxHomeContainer}>
       <motion.div
@@ -35,13 +35,21 @@ function Home() {
         <Box id="homeContent" sx={sxHomeContent}>
           <HelmetWrap />
           <Box id="homeSectionOne" sx={sxHomeSectionOne}>
-            <Box id="buttonContainer" sx={sxButtonContainer}>
+            {/* <Box id="buttonContainer" sx={sxButtonContainer}>
               <GenerateButton />
               <UserInputs />
+            </Box> */}
+            <Box id="buttonContainer" sx={sxButtonContainer}>
+              <GenerateButton />
+              <CategoryList />
             </Box>
-            <CategoryList />
+
+            <Box id="inputPromptContainer" sx={sxInputPromptContainer}>
+              <UserInputs />
+              <PromptOutput />
+            </Box>
           </Box>
-          <PromptOutput />
+          {/* <PromptOutput /> */}
         </Box>
       </motion.div>
     </Box>
