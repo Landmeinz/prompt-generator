@@ -1,3 +1,5 @@
 # prompt-generator
 
-<img width="1425" alt="Screenshot 2023-01-06 at 12 49 39 AM" src="https://user-images.githubusercontent.com/85810386/210946688-2908fc31-cefe-4018-9fd1-3566391bcdd9.png">
+https://keyword-prompt-generator.herokuapp.com/#/home
+
+<img width="1436" alt="Screenshot 2023-01-06 at 9 55 17 PM" src="https://user-images.githubusercontent.com/85810386/211130114-3fd7190d-c047-4f7d-b662-fea978c24629.png">
