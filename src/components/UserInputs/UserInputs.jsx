@@ -13,6 +13,8 @@ import {
   sxButtonTextContent,
   sxTextInput,
   sxAddTextButton,
+  sxAddCircleIcon,
+
 
 } from "../sxStyles";
 
@@ -43,7 +45,7 @@ function UserInputs() {
       </Box>
 
       <Button od="addTextButton" sx={sxAddTextButton} onClick={() => handleClick()}>
-        <AddCircleIcon color="secondary" fontSize="medium" />
+        <AddCircleIcon sx={sxAddCircleIcon} fontSize="medium" />
       </Button>
     </Box>
   );

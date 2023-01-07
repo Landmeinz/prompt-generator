@@ -8,9 +8,9 @@ import { createTheme } from "@mui/material/styles";
 export const theme = createTheme({
   palette: {
     primary: {
-      main: "hsla(14, 77%, 44%, 1)",
-      dark: "hsla(14, 77%, 32%, 1)",
-      light: "hsla(14, 77%, 56%, 1)",
+      main: "hsla(250, 60%, 50%, 1)",
+      dark: "hsla(250, 40%, 10%, 1)",
+      light: "hsla(230, 80%, 10%, 1)",
     },
     secondary: {
       main: "hsla(220, 20%, 20%, 1)",
@@ -206,7 +206,7 @@ export const sxCategoryPillContainer = {
   py: ".4rem",
   borderRadius: 5,
   color: "info.light",
-  backgroundColor: "hsla(14, 77%, 44%, 1)",
+  backgroundColor: "hsla(250, 60%, 50%, 1)",
   boxShadow: 2,
   userSelect: "none",
 
@@ -231,8 +231,8 @@ export const sxCategoryPillContainerSelected = {
   py: ".4rem",
   borderRadius: 5,
   color: "info.light",
-  backgroundColor: "hsla(14, 77%, 26%, 1)",
-  boxShadow: 2,
+  backgroundColor: "hsla(250, 40%, 20%, 1)",
+  boxShadow: 4,
   userSelect: "none",
 
   "&:hover": {
@@ -287,21 +287,22 @@ export const sxGenerateButtonContainer = {
 
 export const sxGenerateButton = {
   bgcolor: "secondary.main",
-  color: "primary",
-  border: 2,
+  color: "info.light",
+  border: 3,
   borderRadius: "50%",
-  borderColor: "info.light",
+  borderColor: "primary.main",
   fontWeight: "bold",
   transition: ".25s",
   boxShadow: 5,
 
   "&:hover": {
-    bgcolor: "primary.light",
-    color: "secondary.main",
+    border: 1,
+    bgcolor: "primary.dark",
+    color: "primary.main",
     transform: "scale(1.05)",
     transition: ".25s",
     boxShadow: 2,
-    borderColor: "info.dark",
+    // borderColor: "info.light",
   },
 
   [theme.breakpoints.down("xxl")]: {
@@ -448,13 +449,13 @@ export const sxCopyButton = {
 
 export const sxClearButton = {
   backgroundColor: "primary.main",
-  color: "secondary.main",
+  color: "info.light",
   fontWeight: "bold",
   width: "5rem",
 
-  "&:hover": {
-    color: "info.light",
-  },
+  // "&:hover": {
+  //   color: "info.light",
+  // },
 };
 
 export const sxPromptOutput = {
@@ -512,6 +513,11 @@ export const sxAddTextButton = {
     backgroundColor: "primary.dark",
   },
 };
+
+export const sxAddCircleIcon = {
+  color: "info.light",
+
+}
 
 export const sxTextInput = {
   // border: "1px solid purple",
